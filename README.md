@@ -70,9 +70,9 @@ the executable, allowing the application to run with minimal resource overhead.
 
 Compiling a native executable takes a bit longer, as GraalVM performs additional
 steps to remove unnecessary codepaths. Use the  `native` profile to compile a
-native executable:
+native executable with Docker:
 
-> ./mvnw package -Dnative
+> mvn install -Dnative -DskipTests -Dquarkus.native.container-build=true
 
 After getting a cup of coffee, you'll be able to run this executable directly:
 
